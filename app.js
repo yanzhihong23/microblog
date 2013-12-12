@@ -37,15 +37,13 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-//app.get('/users', user.list);
-//app.get('/userlist', routes.userlist(db));
 
 //sign up
 app.get('/signup', user.signUp);
-app.post('/doSignUp', user.doSignUp(db));
+app.post('/doSignUp', user.doSignUp);
 //sign in
 app.get('/login', user.logIn);
-app.post('/doLogIn', user.doLogIn(db));
+app.post('/doLogIn', user.doLogIn);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

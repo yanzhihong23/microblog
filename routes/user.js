@@ -1,5 +1,5 @@
 
-/*
+/**
  * User Routing
  */
 var User = require('../models/user');
@@ -14,7 +14,7 @@ exports.doSignUp = function(req, res){
         password: req.body.password
     });
 
-    User.get(username, function(err, user){
+    User.get(newUser.username, function(err, user){
         if(user){
             err = 'username already exits.'
         }
@@ -42,7 +42,7 @@ exports.doLogIn = function(req, res){
         password: req.body.password
     });
 
-    User.get(username, function(err, user){
+    User.get(newUser.username, function(err, user){
         if(user && user.password === newUser.password){
             return res.redirect("/");
         }
