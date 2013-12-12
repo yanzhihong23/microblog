@@ -2,10 +2,7 @@
  * Created by zhhyan on 13-12-12.
  */
 var crypto = require('crypto');
-//db
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/microblog');
+var db = require('./db.js');
 var users = db.get('users');
 
 function User(user){
