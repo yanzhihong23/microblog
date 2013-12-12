@@ -9,11 +9,6 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
-//db
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/expressA');
-
 var app = express();
 
 // all environments
