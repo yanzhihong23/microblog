@@ -5,7 +5,7 @@
 var User = require('../models/user');
 
 exports.signUp = function(req, res){
-    res.render('signup');
+    res.render('signup', {title: 'Sign up'});
 }
 
 exports.doSignUp = function(req, res){
@@ -33,7 +33,7 @@ exports.doSignUp = function(req, res){
 };
 
 exports.logIn = function(req, res){
-    res.render('login');
+    res.render('login', {title: 'Login'});
 }
 
 exports.doLogIn = function(req, res){
