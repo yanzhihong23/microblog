@@ -16,7 +16,7 @@ exports.doSignUp = function(req, res){
 
     User.get(newUser.username, function(err, user){
         if(user){
-            err = 'username already exits.'
+            err = 'Username already exits. Please choose another one.'
         }
         if(err){
             req.flash('error', err);
@@ -45,13 +45,18 @@ exports.doLogIn = function(req, res){
     });
 
     User.get(newUser.username, function(err, user){
-        if(user && user.password === newUser.password){
-            req.session.user = newUser;
-            req.flash('success', 'Login success.');
-            return res.redirect('/');
+        if(!user){
+            req.flash('error', 'User ' + newUser.username + ' does not exit.');
+            return res.redirect('/login');
         }
 
-        req.flash('error', err);
-        res.redirect('/login');
+        if(user.password !== newUser.password){
+            req.flash('error', 'Wrong password.');
+            return res.redirect('/login');
+        }
+
+        req.session.user = newUser;
+        req.flash('success', 'Login success.');
+        res.redirect('/');
     });
 }
