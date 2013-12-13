@@ -27,7 +27,9 @@ exports.doSignUp = function(req, res){
                 req.flash('error', err);
                 return res.redirect('/signup');
             }
-            res.redirect("/");
+            req.session.user = newUser;
+            req.flash('success', 'Sign up success.');
+            res.redirect('/');
         });
     });
 };
@@ -44,7 +46,9 @@ exports.doLogIn = function(req, res){
 
     User.get(newUser.username, function(err, user){
         if(user && user.password === newUser.password){
-            return res.redirect("/");
+            req.session.user = newUser;
+            req.flash('success', 'Login success.');
+            return res.redirect('/');
         }
 
         req.flash('error', err);

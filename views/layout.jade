@@ -2,6 +2,7 @@ doctype 5
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     block link
   body
@@ -18,8 +19,17 @@ html
             ul.nav.navbar-nav
                 li.active
                     a(href='#') Home
-                li
-                    a(href='#') Unknow
-                li
-                    a(href='#') Unknow
+                if(success)
+                    li
+                        a(href='#') Logout
+                else
+                    li
+                        a(href='#') Login
+                    li
+                        a(href='#') Sign Up
+
+    if(success)
+        .alert.alert-success #{success}
+    if(error)
+        .alert.alert-warning #{error}
     block content
