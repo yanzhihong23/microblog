@@ -60,3 +60,9 @@ exports.doLogIn = function(req, res){
         res.redirect('/');
     });
 }
+
+exports.logout = function(req, res){
+    req.session.user = null;
+    req.flash('success', 'Logout success.');
+    res.redirect('/');
+}

@@ -52,6 +52,8 @@ app.post('/doSignUp', user.doSignUp);
 //login
 app.get('/login', user.logIn);
 app.post('/doLogIn', user.doLogIn);
+//logout
+app.get('/logout', user.logout);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
