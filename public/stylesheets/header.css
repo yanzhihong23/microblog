@@ -1,69 +1,48 @@
-.navbar {
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-}
-
-.navbar-fixed-top,
-.navbar-fixed-bottom {
+nav {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
+    line-height: 38px;
+    border: 1px solid transparent;
+    background-color: #222;
+    box-shadow: 0 0 10px #222;
 }
 
-ul,
-li{
-    list-style: none;
-    margin: 0;
-}
-
-li{
-    float: left;
-    /*line-height: 50px;*/
-}
-
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 15px;
-    line-height: 20px;
-}
-
-.navbar-nav li:hover{
+.navbar-nav li.active{
     background: #080808;
 }
 
 .navbar-nav a{
+    position: relative;
+    display: block;
+    padding: 0 15px;
     color: #999;
+    font-size: 12px;
+    font-weight: bold;
 }
 
+.navbar-nav li.active a,
 .navbar-nav a:hover{
     color: #fff;
 }
 
-.navbar-inverse {
-    background-color: #222;
-    border-color: #080808;
-}
-
 .container{
     width: 866px;
+    margin: auto;
 }
 
 .navbar-header {
     float: left;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-brand {
     color: #999;
+    float: left;
+    font-size: 18px;
 }
 
-.navbar-brand {
-    float: left;
-    padding: 15px 15px;
-    font-size: 18px;
-    line-height: 20px;
+.navbar-nav a .text{
+    padding-left: 5px;
 }

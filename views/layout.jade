@@ -4,30 +4,44 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/header-img.css')
     //link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/detail.css')
     block link
   body
-    .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    nav
       .container
-        .navbar-header
-            a.navbar-brand(href='#') MicroBlog
-        .collapse.navbar-collapse
-            ul.nav.navbar-nav
-                li.active
-                    a(href='/') Home
-                if(user)
-                    li
-                        a(href='/logout') Logout
-                else
-                    li
-                        a(href='/login') Login
-                    li
-                        a(href='/signup') Sign Up
-    block welcome
-
-    if(success)
-        .alert.alert-success #{success}
-    if(error)
-        .alert.alert-warning #{error}
+        //.navbar-header
+        //    a.navbar-brand(href='#') MicroBlog
+        ul.nav.navbar-nav.clearfix
+            li.active
+                a(href='/')
+                    span.icon-home(role='icon')
+                    span.text Home
+            if(user)
+                li
+                    a(href='/connect')
+                        span.icon-connect(role='icon')
+                        span.text Connect
+                li
+                    a(href='/discover')
+                        span.icon-discover(role='icon')
+                        span.text Discover
+                li
+                    a(href='/profile')
+                        span.icon-profile(role='icon')
+                        span.text Me
+                //li
+                //    a(href='/logout') Logout
+            else
+                li
+                    a(href='/login') Login
+                li
+                    a(href='/signup') Sign Up
+    //block welcome
+    //
+    //if(success)
+    //    .alert.alert-success #{success}
+    //if(error)
+    //    .alert.alert-warning #{error}
     block content

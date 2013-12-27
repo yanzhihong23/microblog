@@ -1,0 +1,37 @@
+html,
+body,
+.page-outer{
+    height: 100%;
+}
+
+body{
+    background-image: url(../images/bg.png);
+    background-position: 0 40px;
+    background-repeat: no-repeat;
+    background-color: #c0deed;
+}
+
+.page-container{
+    width: 866px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 14px 14px 0;
+    background-image: url(../images/wash-white-30.png);
+    border-radius: 6px;
+}
+
+.dashboard{
+    float: left;
+    width: 302px;
+    height: 300px;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.timeline{
+    float: right;
+    width: 522px;
+    height: 100%;
+    background: #fff;
+    border-radius: 6px;
+}

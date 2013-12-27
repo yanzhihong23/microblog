@@ -1,0 +1,61 @@
+.navbar-nav span[role="icon"]{
+    background-image: url(../images/twitter_web_sprite_icons.png);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-home,
+.icon-connect,
+.icon-discover,
+.icon-profile{
+    width: 22px;
+    height: 22px;
+}
+
+.icon-home{
+    background-position: 0 -50px;
+}
+
+li:hover .icon-home{
+    background-position: 0 -80px;
+}
+
+li.active .icon-home{
+    background-position: 0 -110px;
+}
+
+.icon-discover{
+    background-position: -40px -50px;
+}
+
+li:hover .icon-discover{
+    background-position: -40px -80px;
+}
+
+li.active .icon-discover{
+    background-position: -40px -110px;
+}
+
+.icon-connect{
+    background-position: -80px -50px;;
+}
+
+li:hover .icon-connect{
+    background-position: -80px -80px;
+}
+
+li.active .icon-connect{
+    background-position: -80px -110px;
+}
+
+.icon-profile{
+    background-position: -120px -50px;
+}
+
+li:hover .icon-profile{
+    background-position: -120px -80px;
+}
+
+li.active .icon-profile{
+    background-position: -120px -110px;
+}
