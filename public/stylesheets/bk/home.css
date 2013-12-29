@@ -5,10 +5,7 @@ body,
 }
 
 body{
-    background-image: url(../images/bg.png);
-    background-position: 0 40px;
-    background-repeat: no-repeat;
-    background-color: #c0deed;
+    background: #c0deed url(../../images/bg.png) no-repeat 0 40px;
 }
 
 .page-container{
@@ -16,7 +13,7 @@ body{
     min-height: 100%;
     margin: 0 auto;
     padding: 14px 14px 0;
-    background-image: url(../images/wash-white-30.png);
+    background-image: url(../../images/wash-white-30.png);
     border-radius: 6px;
 }
 

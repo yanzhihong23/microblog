@@ -2,17 +2,14 @@ doctype 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/header.css')
-    link(rel='stylesheet', href='/stylesheets/header-img.css')
-    //link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-    link(rel='stylesheet', href='/stylesheets/detail.css')
+    link(rel='stylesheet/less', href='/stylesheets/style.less')
+    link(rel='stylesheet/less', href='/stylesheets/header.less')
+    link(rel='stylesheet/less', href='/stylesheets/header-img.less')
+    link(rel='stylesheet/less', href='/stylesheets/detail.less')
     block link
   body
     nav
       .container
-        //.navbar-header
-        //    a.navbar-brand(href='#') MicroBlog
         ul.nav.navbar-nav.clearfix
             li.active
                 a(href='/')
@@ -31,17 +28,10 @@ html
                     a(href='/profile')
                         span.icon-profile(role='icon')
                         span.text Me
-                //li
-                //    a(href='/logout') Logout
             else
                 li
                     a(href='/login') Login
                 li
                     a(href='/signup') Sign Up
-    //block welcome
-    //
-    //if(success)
-    //    .alert.alert-success #{success}
-    //if(error)
-    //    .alert.alert-warning #{error}
     block content
+    script(src='/javascripts/less-1.5.0.min.js')

@@ -1,0 +1,83 @@
+html,
+body,
+.page-outer{
+    height: 100%;
+}
+
+body{
+    background: #c0deed url(../images/bg.png) no-repeat 0 40px;
+}
+
+.page-container{
+    width: 866px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 14px 14px 0;
+    background-image: url(../images/wash-white-30.png);
+    border-radius: 6px;
+}
+
+.dashboard{
+    float: left;
+    width: 302px;
+    background: #fff;
+    border-radius: 6px;
+    .profile-wraper{
+      height: 32px;
+      margin: 12px;
+      .icon-avator{
+        float: left;
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border-radius: 3px;
+      }
+      .full-name{
+        font-weight: bold;
+      }
+      .view{
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    ul{
+      border-top: solid 1px #ddd;
+      border-bottom: solid 1px #ddd;
+    }
+    li{
+      height: 48px;
+      padding: 8px 12px;
+      border-right: solid 1px #ddd;
+      &:last-child{
+        border-right: 0px;
+      }
+      .number{
+        color: #333;
+        font-weight: bold;
+      }
+      span{
+        display: block;
+        color: #999;
+        font-size: 12px;
+      }
+    }
+    textarea{
+      width: 276px;
+      height: 32px;
+      line-height: 32px;
+      margin: 12px 15px;
+      border: solid 1px #999;
+      border-radius: 3px;
+      font-size: 14px;
+      padding-left: 10px;
+      resize: none;
+    }
+}
+
+.timeline{
+    float: right;
+    width: 522px;
+    height: 100%;
+    background: #fff;
+    border-radius: 6px;
+}

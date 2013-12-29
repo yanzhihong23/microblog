@@ -1,19 +1,27 @@
 extends layout
 
 block link
-    link(rel='stylesheet', href='/stylesheets/home.css')
-//block welcome
-//    if(!user)
-//        .jumbotron
-//            h1 Welcome to Hom's MicroBlog
-//            p This is a microblog system base on node.js
-//            p
-//                a.btn.btn-lg.btn-primary(href='/login', role='button') Login
-//                a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign Up
+    link(rel='stylesheet/less', href='/stylesheets/home.less')
+
 block content
     .page-outer
         .page-container.clearfix
             .dashboard
+                .profile-wraper.clearfix
+                    img.icon-avator(src='/images/default_profile_5_normal.png')
+                    .full-name Zhihong Yan
+                    .view View my profile page
+                ul.clearfix
+                    li
+                        span.number 2
+                        span TWEETS
+                    li
+                        span.number 3
+                        span FOLLOWING
+                    li
+                        span.number 0
+                        span FOLLOWERS
+                textarea(placeholder='Compose new tweet...')
             .timeline
                 - for(var i=0; i<5; i++)
                     include detailitem
