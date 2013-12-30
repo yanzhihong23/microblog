@@ -49,6 +49,7 @@ a {
   &:hover,
   &:active{
     color: @nice-blue;
+    text-decoration: underline;
   }
 }
 
@@ -102,4 +103,36 @@ li{
   width: 100%;
 }
 
-@import "color.less";
+/**********input style**************/
+input,
+textarea,
+div[contenteditable='true']{
+  display: inline-block;
+  margin: 0;
+  outline: 0 none;
+  background: #fff;
+  border: solid 1px @lighter_grey;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+}
+
+/**********border radius**************/
+
+.small-border-radius{
+  border-radius: 3px;
+}
+
+.middle-border-radius{
+  border-radius: 6px;
+}
+
+@import "color";

@@ -37,6 +37,9 @@ body{
       .full-name{
         font-weight: bold;
         color: #333;
+        &:hover{
+          color: @nice-blue;
+        }
       }
       .view{
         font-size: 12px;
@@ -44,13 +47,13 @@ body{
       }
     }
     ul{
-      border-top: solid 1px #ddd;
-      border-bottom: solid 1px #ddd;
+      border-top: solid 1px @lighter_grey;
+      border-bottom: solid 1px @lighter_grey;
     }
     li{
       height: 48px;
       padding: 8px 12px;
-      border-right: solid 1px #ddd;
+      border-right: solid 1px @lighter_grey;
       &:last-child{
         border-right: 0px;
       }
@@ -72,9 +75,8 @@ body{
       height: 32px;
       line-height: 32px;
       margin: 12px 15px;
-      border: solid 1px #999;
-      border-radius: 3px;
-      font-size: 14px;
+//      border: solid 1px @lighter_grey;
+//      border-radius: 3px;
       padding-left: 10px;
       resize: none;
     }
