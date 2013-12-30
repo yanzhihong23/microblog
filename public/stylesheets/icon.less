@@ -1,8 +1,10 @@
-.navbar-nav span[role="icon"]{
+span[role="icon"]{
     background-image: url(../images/twitter_web_sprite_icons.png);
     display: inline-block;
     vertical-align: middle;
 }
+
+/**********navigation bar icons************/
 
 .icon-home,
 .icon-connect,
@@ -49,5 +51,47 @@
   }
   li.active{
     background-position: -120px -110px;
+  }
+}
+
+
+/**********tweet detail icons************/
+.icon-more,
+.icon-reply,
+.icon-retweet,
+.icon-favorite{
+  height: 12px;
+  vertical-align: top;
+}
+
+.icon-reply{
+  background-position: 0 -190px;
+  width: 13px;
+  .detail-list-item:hover &{
+    background-position: 0 -220px;
+  }
+}
+
+.icon-retweet{
+  background-position: -20px -190px;
+  width: 14px;
+  .detail-list-item:hover &{
+    background-position: -20px -220px;
+  }
+}
+
+.icon-favorite{
+  background-position: -40px -190px;
+  width: 12px;
+  .detail-list-item:hover &{
+    background-position: -40px -220px;
+  }
+}
+
+.icon-more{
+  background-position: -280px -190px;
+  width: 16px;
+  .detail-list-item:hover &{
+    background-position: -280px -220px;
   }
 }

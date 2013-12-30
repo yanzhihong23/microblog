@@ -3,12 +3,27 @@
 
 .detail-list-item
     .detail-user-avatar
-        img(alt='Avatar', src='http://tp4.sinaimg.cn/1713926427/50/40000875722/0')
+        img(alt='Avatar', src='https://pbs.twimg.com/profile_images/378800000664611531/99c26fa602ca16a424966aeb5d71d03d_normal.jpeg')
     .detail-wrapper
-        .detail-user-name User Name
-        .detail-text Content. You can say anything here. Really?
+        .detail-user-name
+            a.full-name LeBron James
+            span.username @KingJames
+            span.post-time 1h
+        .detail-text
+            | Who do i need to talk to to get one of those World Championship Belt?
+            | WWE belt. The real ones
         ul.detail-media-list
-        .detail-info
-            a.post-time Today 23:23
-            a.comment Comment(23)
-            a.forward Forward(23)
+        span.detail-info.clearfix
+            a.expand Expand
+            a.more.right
+                span.icon-more(role='icon')
+                span More
+            a.favorite.right
+                span.icon-favorite(role='icon')
+                span Favorite
+            a.retweet.right
+                span.icon-retweet(role='icon')
+                span Retweet
+            a.reply.right
+                span.icon-reply(role='icon')
+                span Reply

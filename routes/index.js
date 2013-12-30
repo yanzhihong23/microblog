@@ -4,5 +4,9 @@
  */
 
 exports.index = function(req, res){
-    res.render('index', { title: 'MicroBlog Home'});
+    if(req.session.user){
+        res.render('index', { title: 'Twitter'});
+    }else{
+        res.redirect('/login');
+    }
 };

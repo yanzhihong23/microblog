@@ -20,11 +20,13 @@ body{
 .dashboard{
     float: left;
     width: 302px;
-    background: #fff;
-    border-radius: 6px;
+    .module-mini-profile{
+      background: #fff;
+      border-radius: 6px;
+    }
     .profile-wraper{
-      height: 32px;
-      margin: 12px;
+      height: 56px;
+      padding: 12px;
       .icon-avator{
         float: left;
         width: 32px;
@@ -34,6 +36,7 @@ body{
       }
       .full-name{
         font-weight: bold;
+        color: #333;
       }
       .view{
         font-size: 12px;
@@ -53,12 +56,15 @@ body{
       }
       .number{
         color: #333;
-        font-weight: bold;
+        font-weight: bolder;
       }
       span{
         display: block;
         color: #999;
         font-size: 12px;
+      }
+      &:hover span{
+        color: @nice-blue;
       }
     }
     textarea{
@@ -75,9 +81,17 @@ body{
 }
 
 .timeline{
-    float: right;
-    width: 522px;
-    height: 100%;
-    background: #fff;
-    border-radius: 6px;
+  float: right;
+  width: 522px;
+  height: 100%;
+  background: #fff;
+  border-radius: 6px;
+  .header{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 13px;
+    border-bottom: solid 1px #e6e6e6;
+  }
 }
+
+@import "color";

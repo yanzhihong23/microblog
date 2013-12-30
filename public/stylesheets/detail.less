@@ -1,6 +1,16 @@
 .detail-list-item{
-    padding: 20px 0 5px 20px;
-    border-bottom: solid 1px #e6e6e6;
+  padding: 13px;
+  border-bottom: solid 1px #e6e6e6;
+  &:hover{
+    cursor: pointer;
+    background: #F5F5F5;
+    .expand{
+      color: @nice-blue;
+    }
+    .detail-info a.right{
+      color: @light_grey;
+    }
+  }
 }
 .detail-user-avatar{
     float: left;
@@ -9,23 +19,49 @@
     img{
       width: 100%;
       height: 100%;
+      border-radius: 3px;
     }
 }
 .detail-wrapper{
-    margin-left: 65px;
+  margin-left: 65px;
 }
 .detail-user-name{
-    font-weight: bold;
-    font-size: 1.2em;
+    .full-name{
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .username{
+      font-size: 12px;
+      color: @light_grey;
+      padding-left: 5px;
+    }
+    .post-time{
+      float: right;
+      color: @light_grey;
+    }
 }
 .detail-text{
     padding: 4px 0;
 }
 .detail-info{
-    padding: 6px 0 4px;
+  font-size: 12px;
+  color: @light_grey;
+  a.right{
+    padding-left: 10px;
+    color: @lighter_grey;
+  }
 }
-.comment,
-.forward{
-    float: right;
-    padding: 0 3px;
+
+.icon-more,
+.icon-reply,
+.icon-retweet,
+.icon-favorite{
+  background-color: @lighter_grey;
+  .detail-list-item:hover &{
+    background-color: @light_grey;
+  }
 }
+
+
+
+@import "color.less";

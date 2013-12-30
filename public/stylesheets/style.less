@@ -6,12 +6,20 @@
   box-sizing: border-box;
 }
 
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
 .clearfix:after {
-  content:".";
-  display:block;
-  height:0;
-  visibility:hidden;
-  clear:both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
 }
 
 body {
@@ -19,7 +27,7 @@ body {
   min-width: 980px;
   &, textarea{
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: @grey;
   }
 }
 
@@ -34,10 +42,13 @@ label {
 }
 
 a {
-  color: #00B7FF;
   cursor: pointer;
   &, &:visited{
     text-decoration: none;
+  }
+  &:hover,
+  &:active{
+    color: @nice-blue;
   }
 }
 
@@ -90,3 +101,5 @@ li{
   display: block;
   width: 100%;
 }
+
+@import "color.less";
