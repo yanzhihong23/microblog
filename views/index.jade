@@ -7,12 +7,12 @@ block content
     .page-outer
         .page-container.clearfix
             .dashboard
-                .module-mini-profile
+                .module.mini-profile
                     a(href='/zhhyan')
                         .profile-wraper.clearfix
                             img.icon-avator(src='/images/default_profile_5_normal.png')
                             .full-name LeBron James
-                            .view View my profile page
+                            span.view View my profile page
                     ul.clearfix
                         li
                             a
@@ -27,7 +27,39 @@ block content
                                 span.number 0
                                 span FOLLOWERS
                     textarea#mini-profile-new(placeholder='Compose new tweet...')
-            .timeline
-                .header Tweets
-                - for(var i=0; i<5; i++)
-                    include detailitem
+                .module.trends
+                    .trends-heading
+                        span Trends ·
+                        a Change
+                    .trend-list
+                        .trend: a Merry Christmas
+                        .trend: a MCG
+                        .trend: a #NBA
+                        .trend: a Bogut
+                        .trend: a Stephen Jackson
+                        .trend: a Matt Smith
+                        .trend: a Santa
+                        .trend: a Happy New Year
+            .dashboard-right
+                .module.recommendation
+                    .heading
+                        | Here are some people you might enjoy following.
+                        .action
+                            a Refresh
+                            span  ·
+                            a View all
+                    ul.recommended-follower-list.clearfix
+                        - for(var i=0; i<3; i++)
+                            li.recommended-follower-item
+                                a
+                                    img.avator(src='https://pbs.twimg.com/profile_images/415322986292322304/AAKktxvT_reasonably_small.jpeg')
+                                    .full-name Miami HEAT
+                                    .username @MiamiHEAT
+                                .following-bar
+                                    .btn
+                                        span.icon-follow(role='icon')
+                                        span Follow
+                .module.timeline
+                    .heading Tweets
+                    - for(var i=0; i<5; i++)
+                        include detailitem

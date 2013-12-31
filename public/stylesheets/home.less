@@ -17,12 +17,24 @@ body{
     border-radius: 6px;
 }
 
+.module{
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: #fff;
+  background-clip: padding-box;
+  border: @border_grey;
+}
+
 .dashboard{
     float: left;
     width: 302px;
-    .module-mini-profile{
-      background: #fff;
-      border-radius: 6px;
+    .mini-profile{
+      background: #f9f9f9;
+      background-clip: padding-box;
+      a:hover{
+        text-decoration: none;
+      }
     }
     .profile-wraper{
       height: 56px;
@@ -39,6 +51,7 @@ body{
         color: #333;
         &:hover{
           color: @nice-blue;
+          text-decoration: underline;
         }
       }
       .view{
@@ -47,13 +60,13 @@ body{
       }
     }
     ul{
-      border-top: solid 1px @lighter_grey;
-      border-bottom: solid 1px @lighter_grey;
+      border-top: @border_grey;
+      border-bottom: @border_grey;
     }
     li{
       height: 48px;
       padding: 8px 12px;
-      border-right: solid 1px @lighter_grey;
+      border-right: @border_grey;
       &:last-child{
         border-right: 0px;
       }
@@ -75,25 +88,79 @@ body{
       height: 32px;
       line-height: 32px;
       margin: 12px 15px;
-//      border: solid 1px @lighter_grey;
-//      border-radius: 3px;
       padding-left: 10px;
       resize: none;
     }
 }
 
-.timeline{
+.trends{
+  background: #f9f9f9;
+  background-clip: padding-box;
+  padding: 0 12px 12px;
+  a{
+    color: @nice-blue;
+    font-size: 12px;
+  }
+  .trends-heading{
+    padding: 12px 0 6px;
+  }
+  .trend{
+    line-height: 18px;
+  }
+}
+
+.dashboard-right{
   float: right;
   width: 522px;
   height: 100%;
-  background: #fff;
-  border-radius: 6px;
-  .header{
+  .heading{
     font-size: 18px;
     font-weight: bold;
     padding: 13px;
-    border-bottom: solid 1px #e6e6e6;
+    border-bottom: @border_grey;
   }
+  .action a{
+    color: @nice-blue;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.recommended-follower-list{
+  padding: 12px;
+}
+
+.recommended-follower-item{
+  margin-right: 36px;
+  .avator{
+    border-radius: 6px;
+  }
+  .full-name{
+    font-weight: bold;
+    line-height: 24px;
+  }
+  .username{
+    color: @light_grey;
+    font-size: 12px;
+  }
+  a:hover{
+    text-decoration: none;
+    .full-name{
+      text-decoration: underline;
+    }
+  }
+  .following-bar{
+    margin-top: 6px;
+  }
+}
+
+.icon-follow + span{
+  padding-left: 2px;
+  font-weight: bold;
+}
+
+.timeline{
+
 }
 
 @import "color";

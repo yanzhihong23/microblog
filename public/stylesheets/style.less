@@ -68,14 +68,26 @@ li{
 
 .btn {
   display: inline-block;
+  padding: 5px 10px;
   border: solid 1px transparent;
-  background-image: none;
+  font-size: 13px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
+  border: solid 1px #ccc;
   border-radius: 4px;
   -moz-user-select: none;
+  background-color: #ddd;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(#fff, #ddd);
+  &:hover{
+    color: #333;
+    text-decoration: none;
+    background-color: #d8d8d8;
+    background-image: linear-gradient(#f8f8f8, #d8d8d8);
+    border-color: #bbb;
+  }
 }
 
 .btn-lg{
@@ -85,9 +97,10 @@ li{
   border-radius: 6px;
 }
 
-.btn-primary{
+.btn.btn-primary{
   color: #fff;
   background-color: #428bca;
+  background-image: none;
   border-color: #357ebd;
   &:hover,
   &:focus,
